@@ -42,6 +42,16 @@ callApi();
 // number of tags (not the tag details, just the amount of tags)
 // The styling for this assignment is not important but loading indicator should be displayed while the API call is in progress.
 
+function apiLoop(loop) {
+    
+
+    for (let i = 0; i < loop.length; i++) {
+
+            console.log(loop[i].name);
+    }
+}
+
+apiLoop(callApi)
 
 
 // Be sure to handle any potential errors in the code.

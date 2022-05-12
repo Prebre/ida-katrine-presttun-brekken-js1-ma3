@@ -10,20 +10,42 @@
 // Make a call to the following API endpoint.
 
 const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=7e8ddb30448b419b91a00a3c34ff18ce";
-const proxy = "http://noroffcors.herokuapp.com/";
-
-const fixCors = proxy + url;
 
 const fixResults = document.querySelector(".result");
 
 async function callApi() {
-        const response = await fetch(fixCors);
+        try {
+            const response = await fetch(url);
 
             const results = await response.json();
 
-            console.log(results);
-}
+            for(let i = 0; i < 8; i++) {
 
+                console.log(results[i]);
+
+                if(i === 7) {
+                    break;
+                }
+
+                /*let objectList = document.createElement("div");
+                let objectName = document.createElement("h3");
+                let objectInfo = document.createElement("p");
+
+                objectName.innerHTML = results[i].title;
+                objectInfo.innerHTML = results[i].rating + ", " + results[i].tags.length;
+
+                objectList.append(objectName, objectInfo);*/
+            }
+
+            console.log(results);
+
+        } catch (error) {
+
+            console.log(error);
+            //fixResults.innerHTML = e.toString();
+        
+        }
+}
 
 callApi();
 

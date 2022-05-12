@@ -5,7 +5,4 @@
 // return a % b;
 // }
 
-const getRemainder = (a,b) => console.log(a % b);
-
-a = 280;
-b = 3;
+var getRemainder = (a, b) => a % b;

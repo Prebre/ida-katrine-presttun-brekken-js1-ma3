@@ -23,26 +23,32 @@ async function callApi() {
 
                 console.log(results[i]);
 
+                // console.log(results[i].name);
+                // console.log(results[i].rating);
+                // console.log(results[i].tags.length);
+
+                // let objectList = document.createElement("div");
+                // let objectName = document.createElement("h3");
+                // let objectRatings = document.createElement("p");
+                // let objectTags = document.createElement("p");
+
+                // objectName.innerHTML = results[i].name;
+                // objectRatings.innerHTML = results[i].rating
+                // objectTags.innerHTML = results[i].tags.length;
+
+                // objectList.append(objectName, objectRatings, objectTags);
+
                 if(i === 7) {
                     break;
                 }
-
-                /*let objectList = document.createElement("div");
-                let objectName = document.createElement("h3");
-                let objectInfo = document.createElement("p");
-
-                objectName.innerHTML = results[i].title;
-                objectInfo.innerHTML = results[i].rating + ", " + results[i].tags.length;
-
-                objectList.append(objectName, objectInfo);*/
             }
 
             console.log(results);
 
-        } catch (error) {
+        } catch (err) {
 
-            console.log(error);
-            //fixResults.innerHTML = e.toString();
+            console.log(err);
+            fixResults.innerHTML = e.toString("Error: No value found");
         
         }
 }

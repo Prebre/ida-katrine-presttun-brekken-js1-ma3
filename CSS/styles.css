@@ -1,0 +1,42 @@
+h1, h2, #gamelist, .rating, .tags {
+    text-align: center;
+}
+
+h1, h2 {
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.rating, .tags {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    line-height: 3rem;
+    border-bottom: 3px double black;
+    padding: 15px;
+    margin: auto 20px 15px 20px;
+}
+
+h2 {
+    color: darkolivegreen;
+    line-height: 2rem;
+}
+
+#gamelist {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.game {
+    margin: 20px;
+    padding: 20px;
+    border: 5px double darkolivegreen;
+    border-radius: 30px;
+    flex: 200px;
+    background-color: bisque;
+}
